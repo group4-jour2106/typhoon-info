@@ -48,7 +48,7 @@ window.alert("打風啦！");
           <li><a href="#about"> 李氏力場的由來   </a></li>
           <li><a href="#union"> 鐵證派比安？</a></li>
           <li><a href="#school"> 香港的熱帶氣旋警告信號 </a></li>
-          <li><a href="#contact"> 一個都市傳說？ </a></li>
+          <li><a href="#urban"> 一個都市傳說？ </a></li>
         </ul>
       </div>
     </nav>
@@ -92,12 +92,13 @@ window.alert("打風啦！");
 	<p>有言論指，天文台風球制度過時，加上在發佈信息、定位等各方面都有不足之處。</p>
 	<p>值得一提的是，香港天文台就是次派比安襲港而對熱帶氣旋警告機制進行檢討。</p>
         <br>
+	
 	    <div class="container-fluid">
             <div class="row">    
             <div class="col-md-6 col-sm-offset-1">
             <br>
 	    <div id="mybar01" style="width: 600px;height:400px;"></div>
-	    <script>
+	     <script>
 option = {
     tooltip : {
         trigger: 'axis',
@@ -114,6 +115,8 @@ option = {
         bottom: '3%',
         containLabel: true
     },
+
+    
     xAxis : [
         {
             type : 'category',
@@ -175,17 +178,14 @@ option = {
         myChart1.setOption(option);
 	    </script>
 	</div>
-<div class="col-md-4 col-sm-offset-1">
-<p>從上圖表可見，派比安於各區監測站所錄得的數據均能得到甚至超越大部分八號以上颱風的風速。</p>
-<p>下圖集結香港1999年至2015年以來所有颱風，以其最接近懸掛最高信號時監測站錄得該方向平均最高風速作比較，
-	     亦可見派比安的強度遠超於其餘三號風球，更「拍得住」不少八、九號颱風。</p>
-  </div>
-  </div>
-  </div>
 		    
-		    
- <div id="mybar02" style="width: 1000px;height:550px;"></div>
- <script>		     
+	<div class="container-fluid">
+            <div class="row">    
+            <div class="col-md-6 col-sm-offset-1">
+            <br>
+	    <div id="mybar02" style="width: 600px;height:400px;"></div>
+	     <script>
+		     
 var data3 = [
     [2006,83,83,"颱風","3","派比安 (Prapiroon)"],
     [2001,25,25,"颱風","3","百合 (Nari)"],
@@ -388,18 +388,23 @@ option = {
 };
 		     // Use the option to display chart
         var myChart2 = echarts.init(document.getElementById('mybar02'));
-        myChart2.setOption(option);
-</script>
+        myChart1.setOption(option);
+	    </script>
+	</div>
 		     
-<br>
+		     
+      <div class="col-md-4 col-sm-offset-1">
+	      <p>從上圖表可見，派比安於各區監測站所錄得的數據均能得到甚至超越大部分八號以上颱風的風速。</p>
+     <p>下圖集結香港1999年至2015年以來所有颱風，以其最接近懸掛最高信號時監測站錄得該方向平均最高風速作比較，
+	     亦可見派比安的強度遠超於其餘三號風球，更「拍得住」不少八、九號颱風。</p>
+  </div>
+  </div>
+  </div>
 	    
 <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1dh5EWc32rIjVGsC29u8LTkMwIEU" width="60%" height="600"></iframe>
     </div>
     
-    <div id ="recent"> </div>
-    <div class="section recent">
-    </div>
-    
+
     <div id ="school"> </div>
     <div class="section school">
 	    <p>每當有熱帶氣旋在香港800公里的範圍內集結並影響本港，天文台會發出熱帶氣旋警告。</p>
@@ -444,17 +449,15 @@ option = {
         </table>
     </div>
     
-    <div id ="uwyo"> </div>
-    <div class="section uwyo">
+    <div id ="urban"> </div>
+    <div class="section urban">
+	     <p>天文台當年在派比安期間沒有懸掛八號以上信號，引來社會尤其普羅市民的極大爭議。市民所感受到的只是部分風力，電視台攝錄到的畫面亦是部分的，並未能全面代表整體的情況。天文台此後亦多次表示派比安沒有達到懸掛八號以上信號的所有條件，而「李氏力場」亦只是一個都市傳說，一個香港人共同的集體回憶。。</p>
     </div>
     
     <div id ="contact"> </div>
     <div class="section contact">
     </div>
     
-    <div id ="site"> </div>
-    <div class="section site">
-    </div>
     
   </div>
 
