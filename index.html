@@ -8,7 +8,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <title>李氏力場</title>
 <!-- Use echarts.js -->
-    <script src="echarts.min.js"></script>
+  <script src="echarts.min.js"></script>
   <style>
     @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700|Montserrat:400,700|Roboto:400,300italic,100italic,100,300,400italic,500,500italic,700,700italic,900,900italic);
   </style>
@@ -102,6 +102,98 @@ window.alert("打風啦！");
 	</div>
         </div>
         </div>
+	    <div class="container-fluid">
+            <div class="row">    
+            <div class="col-md-6 col-sm-offset-1">
+            <br>
+	    <div id="mybar01" style="width: 600px;height:400px;"></div>
+	     <script>
+option = {
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+        legend: {
+        data:['派比安(三號)','伊布都(八號)','圓規(八號)','玉兔(八號)','瑪姬(九號)','杜鵑(九號)']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+
+    
+    xAxis : [
+        {
+            type : 'category',
+            name:'監測站',
+            data : ['啟德(東南)','中環','天星','長洲','橫瀾島','赤鱲角']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            name:'平均風速 (公里/小時)',
+        }
+    ],
+    series : [
+        {
+            name:'派比安(三號)',
+            type:'bar',
+            data:[58, 54, 58, 103, 79, 72],
+            markLine : {
+                lineStyle: {
+                    normal: {
+                        type: 'dashed'
+                    }
+                },
+
+            }
+        },
+        {
+            name:'伊布都(八號)',
+            type:'bar',
+            data:[45, 40, 54, 101, 83, 67 ]
+        },
+        {
+            name:'圓規(八號)',
+            type:'bar',
+            data:[41, 31, 47, 54, 88, 49 ]
+        },
+                {
+            name:'玉兔(八號)',
+            type:'bar',
+            data:[, 31, 41, 68, 68, 44 ]
+        },
+        {
+            name:'瑪姬(九號)',
+            type:'bar',
+            data:[, 40, 56, 77, 70, 56]
+        },
+        {
+            name:'杜鵑(九號)',
+            type:'bar',
+            data:[62, 25, 76, 88, 81, 83]
+        },
+        
+        
+    ]
+};
+		     // Use the option to display chart
+        var myChart1 = echarts.init(document.getElementById('mybar01'));
+        myChart1.setOption(option);
+	    </script>
+	</div>
+      <div class="col-md-4 col-sm-offset-1">
+	      <p>從上圖表可見，派比安於各區監測站所錄得的數據均能得到甚至超越大部分八號以上颱風的風速。</p>
+     <p>下圖集結香港1999年至2015年以來所有颱風，以其最接近懸掛最高信號時監測站錄得該方向平均最高風速作比較，
+	     亦可見派比安的強度遠超於其餘三號風球，更「拍得住」不少八、九號颱風。</p>
+  </div>
+  </div>
+  </div>
 	    
 <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1dh5EWc32rIjVGsC29u8LTkMwIEU" width="60%" height="600"></iframe>
     </div>
