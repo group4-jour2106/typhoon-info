@@ -178,6 +178,221 @@ option = {
         myChart1.setOption(option);
 	    </script>
 	</div>
+		    
+	<div class="container-fluid">
+            <div class="row">    
+            <div class="col-md-6 col-sm-offset-1">
+            <br>
+	    <div id="mybar02" style="width: 600px;height:400px;"></div>
+	     <script>
+		     
+var data3 = [
+    [2006,83,83,"颱風","3","派比安 (Prapiroon)"],
+    [2001,25,25,"颱風","3","百合 (Nari)"],
+    [2001,36,36,"颱風","3","榴槤 (Durian)"],
+    [2003,40,40,"颱風","3","科羅旺 (Krovanh)"],
+    [2005,34,34,"颱風(強颱風)","3","達維 (Damrey)"],
+    [2006,43,43,"颱風(超強颱風)","3","珍珠 (Chanchu)"],
+    [2006,30,30,"颱風","3","浣熊 (Neoguri)"],
+    [2009,30,30,"熱帶風暴","3","浪卡 (Nangka)"],
+    [2009,34,34,"熱帶風暴","3","蘇迪羅 (Soudelor)"],
+    [2010,36,36,"熱帶風暴","3","燦都 (Chanthu)"],
+    [2010,40,40,"強颱風","3","凡亞比 (Fanapi)"],
+    [2010,49,49,"超強颱風","3","鮎魚 (Megi)"],
+    [2011,31,31,"熱帶風暴","3","海馬 (Haimi)"],
+    [2011,52,52,"強烈熱帶風暴","3","洛坦 (Nock-ten)"],
+    [2011,43,43,"強颱風","3","尼格 (Nalgae)"],
+    [2012,31,31,"強烈熱帶風暴","3","泰利 (Talim)"],
+    [2012,38,38,"熱帶風暴","3","貝碧嘉 (Bebinca)"],
+    [2013,43,43,"強烈熱帶風暴","3","溫比亞 (Rumbia)"],
+    [2013,45,45,"強烈熱帶風暴","3","飛燕 (Jebi)"],
+    [2014,58,58,"超強颱風","3","威馬遜 (Rammasun)"],
+    [2015,54,54,"強颱風","3","彩虹 (Mujigae)"],
+];
+
+var data8 = [
+    [2004,88,88,"熱帶風暴","8SW","圓規 (Kompasu)"],
+    [2013,65,65,"超強颱風","8NW","天兔 (Usagi)"],
+    [2012,53,53,"颱風","8SE","啟德 (Kai-Tak)"],
+    [2002,81,81,"強烈熱帶風暴","8SE","黑格比 (Hagupit)"],
+    [2003,58,58,"颱風(超強颱風)","8NE","伊布都 (Imbudo)"],
+    [2001,79,79,"颱風","8SE","玉兔 (Yutu)"],
+    [2001,58,58,"颱風","8NW","尤特 (Utor)"],
+    [2008,59,59,"颱風(強颱風)","8NW","風神 (Fengshen)"],
+    [2015,85,85,"颱風","8NW","蓮花 (Linfa)"],
+    [2015,45,45,"颱風","8SE","海鷗 (Kalmaegl)"],
+    [2007,85,85,"強烈熱帶風暴","8SW","帕布 (Pabuk)"],
+    [2012,49,49,"熱帶風暴","8SE","杜蘇芮 (Doksuri)"],
+    [2008,47,47,"強烈熱帶風暴","8SE","北冕 (Kammuri)"],
+    [2008,76,76,"颱風(強颱風)","8SE","黑格比 (Hagupit)"],
+    [2011,58,58,"颱風(強颱風)","8SE","納沙(Nesat)"],
+    [2009,70,70,"颱風","8NE","巨爵(Koppu)"],
+    [2009,45,45,"強烈熱帶風暴","8SE","天鵝 (Goni)"],
+
+];
+
+var data9 = [
+    [1999,88,88,"颱風","8NW","瑪姬 (Maggie)"],
+    [2003,101,101,"颱風(強颱風)","9","杜鵑 (Dujuan)"],
+    [2008,128,128,"颱風","9","鸚鵡 (Nuri)"],
+    [2012,83,83,"強颱風","9","韋森特 (Vicente)"],
+    [2009,104,104,"強颱風","9","莫拉菲 (Molave)"],
+];
+
+var schema = [
+    {name: 'date', index: 0, text: '年'},
+    {name: 'AQIindex', index: 1, text: '懸掛信號時該風向最高風速'},
+    {name: 'PM25', index: 2, text: 'PM2.5'},
+    {name: 'stage', index: 3, text: '強度'},
+    {name: 'stage', index: 4, text: '最高信號'}
+];
+
+
+var itemStyle = {
+    normal: {
+        opacity: 0.8,
+        shadowBlur: 10,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowColor: 'rgba(0, 0, 0, 0.5)'
+    }
+};
+
+option = {
+    backgroundColor: '#404a59',
+    color: [
+        '#dd4444', '#fec42c', '#80F1BE'
+    ],
+    legend: {
+        y: 'top',
+        data: ['3 號熱帶氣旋警告', '8 號熱帶氣旋警告', '9 號熱帶氣旋警告'],
+        textStyle: {
+            color: '#fff',
+            fontSize: 16
+        }
+    },
+    grid: {
+        x: '10%',
+        x2: 150,
+        y: '18%',
+        y2: '10%'
+    },
+    tooltip: {
+        padding: 10,
+        backgroundColor: '#222',
+        borderColor: '#777',
+        borderWidth: 1,
+        formatter: function (obj) {
+            var value = obj.value;
+            return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+                + value[0] + '年：'
+                + value[5]
+                + '</div>'
+                + schema[1].text + '：' + value[1] + '公里/小時' + '<br>'
+                + schema[3].text + '：' + value[3] + '<br>'
+                + schema[4].text + '：' + value[4] + '<br>';
+                
+        }
+    },
+    xAxis: {
+        type: 'value',
+        name: '年份',
+        nameGap: 16,
+        nameTextStyle: {
+            color: '#fff',
+            fontSize: 14
+        },
+        min: 1998,
+        max: 2016,
+        splitLine: {
+            show: false
+        },
+        axisLine: {
+            lineStyle: {
+                color: '#eee'
+            }
+        }
+    },
+    yAxis: {
+        type: 'value',
+        name: '風速 (公里/小時)',
+        nameLocation: 'end',
+        nameGap: 20,
+        nameTextStyle: {
+            color: '#fff',
+            fontSize: 16
+        },
+        axisLine: {
+            lineStyle: {
+                color: '#eee'
+            }
+        },
+        splitLine: {
+            show: false
+        }
+    },
+    visualMap: [
+        {
+            left: 'right',
+            top: '10%',
+            dimension: 2,
+            min: 0,
+            max: 140,
+            itemWidth: 30,
+            itemHeight: 220,
+            calculable: true,
+            precision: 0.1,
+            text: ['最接近懸掛最高信號時監測站錄得該方向平均最高風速 (公里/小時)'],
+            textGap: 30,
+            textStyle: {
+                color: '#fff'
+            },
+            inRange: {
+                symbolSize: [5, 70]
+            },
+            outOfRange: {
+                symbolSize: [5, 70],
+                color: ['rgba(255,255,255,.2)']
+            },
+            controller: {
+                inRange: {
+                    color: ['#e13101']
+                },
+                outOfRange: {
+                    color: ['#444']
+                }
+            }
+        },
+        
+    ],
+    series: [
+        {
+            name: '3 號熱帶氣旋警告',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: data3
+        },
+        {
+            name: '8 號熱帶氣旋警告',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: data8
+        },
+        {
+            name: '9 號熱帶氣旋警告',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: data9
+        }
+    ]
+};
+		     // Use the option to display chart
+        var myChart2 = echarts.init(document.getElementById('mybar02'));
+        myChart1.setOption(option);
+	    </script>
+	</div>
+		     
+		     
       <div class="col-md-4 col-sm-offset-1">
 	      <p>從上圖表可見，派比安於各區監測站所錄得的數據均能得到甚至超越大部分八號以上颱風的風速。</p>
      <p>下圖集結香港1999年至2015年以來所有颱風，以其最接近懸掛最高信號時監測站錄得該方向平均最高風速作比較，
