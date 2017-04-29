@@ -144,6 +144,7 @@ img
   margin: 0 auto;
   padding: 0;
   width: 50%;
+  position: center;
 }
 
 
@@ -425,6 +426,7 @@ table#香港的熱帶氣旋警告信號 {
   border-radius: 5px;
   padding: 0;
   width: 50%;
+  position: center;
 }
 table#香港的熱帶氣旋警告信號 caption { 
   font-size: 2rem; color: #444;
