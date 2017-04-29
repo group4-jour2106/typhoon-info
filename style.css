@@ -141,6 +141,9 @@ a:hover,a:active
 img
 {
   border: 0px;
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
 }
 
 
@@ -419,7 +422,9 @@ table#香港的熱帶氣旋警告信號 {
   font-weight: 100; 
   background: #333; color: #fff;
   text-rendering: optimizeLegibility;
-  border-radius: 5px; 
+  border-radius: 5px;
+  padding: 0;
+  width: 50%;
 }
 table#香港的熱帶氣旋警告信號 caption { 
   font-size: 2rem; color: #444;
