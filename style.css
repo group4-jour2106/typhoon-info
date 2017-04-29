@@ -79,6 +79,12 @@ body
   background-color: #fff;
 }
 
+p
+{
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
 
 /*NAVIGATION*/
 nav
