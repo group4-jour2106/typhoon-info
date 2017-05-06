@@ -324,7 +324,6 @@ option = {
         y: 'top',
         data: ['3 號熱帶氣旋警告', '8 號熱帶氣旋警告', '9 號熱帶氣旋警告'],
         textStyle: {
-            color: '#fff',
             fontSize: 16
         }
     },
@@ -363,11 +362,6 @@ option = {
         splitLine: {
             show: false
         },
-        axisLine: {
-            lineStyle: {
-                color: '#eee'
-            }
-        }
     },
     yAxis: {
         type: 'value',
@@ -376,11 +370,6 @@ option = {
         nameGap: 20,
         nameTextStyle: {
             fontSize: 16
-        },
-        axisLine: {
-            lineStyle: {
-                color: '#eee'
-            }
         },
         splitLine: {
             show: false
@@ -415,29 +404,6 @@ option = {
                 }
             }
         },
-        
-    ],
-    series: [
-        {
-            name: '3 號熱帶氣旋警告',
-            type: 'scatter',
-            itemStyle: itemStyle,
-            data: data3
-        },
-        {
-            name: '8 號熱帶氣旋警告',
-            type: 'scatter',
-            itemStyle: itemStyle,
-            data: data8
-        },
-        {
-            name: '9 號熱帶氣旋警告',
-            type: 'scatter',
-            itemStyle: itemStyle,
-            data: data9
-        }
-    ]
-};
 		     // Use the option to display chart
         var myChart2 = echarts.init(document.getElementById('mybar02'));
         myChart2.setOption(option);
