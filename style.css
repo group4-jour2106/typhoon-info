@@ -551,16 +551,16 @@ width: 100%;
   font-size: 20px;
   color: #333366;
 }
-.fa fa-facebook {
+.social-icons fa fa-facebook {
   background: #3B5998;
   color: white;
 }
 
-.fa fa-twitter {
+.social-icons fa fa-twitter {
   background: #55ACEE;
   color: white;
 }
-.fa fa-instagram {
+.social-icons fa fa-instagram {
   background: #125688;
   color: white;
 }
