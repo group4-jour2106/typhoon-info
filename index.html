@@ -404,6 +404,28 @@ option = {
                 }
             }
         },
+	     ],
+    series: [
+        {
+            name: '3 號熱帶氣旋警告',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: data3
+        },
+        {
+            name: '8 號熱帶氣旋警告',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: data8
+        },
+        {
+            name: '9 號熱帶氣旋警告',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: data9
+        }
+    ]
+};
 		     // Use the option to display chart
         var myChart2 = echarts.init(document.getElementById('mybar02'));
         myChart2.setOption(option);
